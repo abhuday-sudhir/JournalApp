@@ -27,6 +27,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                     .build();
             return userDetails;
         }
-        return null;
+        throw new UsernameNotFoundException("Username or password is wrong");
     }
 }
