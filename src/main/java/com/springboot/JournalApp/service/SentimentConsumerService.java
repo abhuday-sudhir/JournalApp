@@ -10,14 +10,14 @@ public class SentimentConsumerService {
     @Autowired
     private EmailService emailService;
 
-    @KafkaListener(topics = "weekly_sentiments" , groupId = "weekly_sentiments_group")
-    public void consume(SentimentData sentimentData){
-        sendEmail(sentimentData);
-    }
-
-    public void sendEmail(SentimentData sentimentData)
-    {
-        emailService.sendMail(sentimentData.getEmail(),"Sentiment for previous week",sentimentData.getSentiment());
-    }
+//    @KafkaListener(topics = "weekly_sentiments" , groupId = "weekly_sentiments_group")
+//    public void consume(SentimentData sentimentData){
+//        sendEmail(sentimentData);
+//    }
+//
+//    public void sendEmail(SentimentData sentimentData)
+//    {
+//        emailService.sendMail(sentimentData.getEmail(),"Sentiment for previous week",sentimentData.getSentiment());
+//    }
 
 }

@@ -1,6 +1,8 @@
 package com.springboot.JournalApp.entity;
 
 import com.springboot.JournalApp.enums.Sentiment;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NonNull;
@@ -16,6 +18,7 @@ import java.time.LocalDateTime;
 public class JournalEntry
 {
     @Id
+    @JsonSerialize(using = ToStringSerializer.class)
     private ObjectId id;
 
     @NonNull

@@ -23,6 +23,5 @@ public class WeatherResponse{
         @JsonProperty("feelslike")
         private int feelsLike;
     }
-
 }
 
